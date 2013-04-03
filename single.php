@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
-	
+	<div class="small-12 large-9 columns" id="main" role="main">
+
+
 	<?php /* Start loop */ ?>
 	<?php while (have_posts()) : the_post(); ?>
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
@@ -23,5 +23,5 @@
 
 	</div>
 	<?php get_sidebar(); ?>
-		
+
 <?php get_footer(); ?>

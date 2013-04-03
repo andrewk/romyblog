@@ -12,16 +12,33 @@
 // Comment out this import if you are customizing you imports below
 @import "foundation";
 
-header.row h1 a
+
+#wpadminbar{ display:none }
+
+
+
+[role="banner"]
 {
-  background: url(../img/header.jpg) no-repeat 50% 0;
-  height:271px;
-  text-indent:-9999em;
-  overflow:hidden;
-  display:block;
+  margin-bottom:$paragraph-margin-bottom;
+  a
+  {
+    background: url(../img/header.jpg) no-repeat 50% 0;
+    height:271px;
+    text-indent:-9999em;
+    overflow:hidden;
+    display:block;
+  }
 }
 
-
+// need heavy-handed selectors to override Foundation
+#main,
+#sidebar
+{
+  /*
+  float:none;
+  margin:0 auto;
+  */
+}
 
 // add new pagination class for WordPress, Sass is amazingly fast
 .page-numbers { @include pagination; }

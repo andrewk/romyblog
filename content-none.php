@@ -14,5 +14,4 @@
 	<div class="entry-content">
 		<p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'reverie' ); ?></p>
 	</div>
-	<hr />
 </article>

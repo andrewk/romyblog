@@ -5065,12 +5065,27 @@ table tfoot tr td {
   max-width: 800px;
 }
 
-header.row h1 a {
+#wpadminbar {
+  display: none;
+}
+
+[role="banner"] {
+  margin-bottom: 1.25em;
+}
+[role="banner"] a {
   background: url(../img/header.jpg) no-repeat 50% 0;
   height: 271px;
   text-indent: -9999em;
   overflow: hidden;
   display: block;
+}
+
+#main,
+#sidebar {
+  /*
+  float:none;
+  margin:0 auto;
+  */
 }
 
 .page-numbers {

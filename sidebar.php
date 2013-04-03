@@ -1,3 +1,3 @@
-<aside id="sidebar" class="small-12 large-4 columns">
+<section id="sidebar" class="sidebar small-12 large-9 columns">
 	<?php dynamic_sidebar("Sidebar"); ?>
-</aside><!-- /#sidebar -->
+</section>
