@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- Row for main content area -->
-	<div class="small-12 large-9 columns" id="main" role="main">
+	<section id="main" role="main">
 
 	<?php if ( have_posts() ) : ?>
 
@@ -23,7 +23,7 @@
 		</nav>
 	<?php } ?>
 
-	</div>
+	</section>
 	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

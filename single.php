@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div class="small-12 large-9 columns" id="main" role="main">
+	<section id="main" role="main">
 
 
 	<?php /* Start loop */ ?>
@@ -8,8 +8,11 @@
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
-				<?php reverie_entry_meta(); ?>
+				<time class="updated" datetime="<?php the_time('c'); ?>" pubdate>
+					<?php the_time('F jS'); ?> <span><?php the_time('Y'); ?></span>
+				</time>
 			</header>
+
 			<div class="entry-content">
 				<?php the_content(); ?>
 			</div>
@@ -21,7 +24,7 @@
 		</article>
 	<?php endwhile; // End the loop ?>
 
-	</div>
+	</section>
 	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

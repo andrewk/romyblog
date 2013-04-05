@@ -1,28 +1,21 @@
 <?php function reverie_comments($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment; ?>
-	<li <?php comment_class(); ?>>
-		<article id="comment-<?php comment_ID(); ?>">
-			<header class="comment-author">
-				<?php echo get_avatar($comment,$size='48'); ?>
-				<div class="author-meta">
-					<?php printf(__('<cite class="fn">%s</cite>', 'reverie'), get_comment_author_link()) ?>
-					<time datetime="<?php echo comment_date('c') ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s', 'reverie'), get_comment_date(),  get_comment_time()) ?></a></time>
-					<?php edit_comment_link(__('(Edit)', 'reverie'), '', '') ?>
-				</div>
-			</header>
-			
+	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+		<?php echo get_avatar($comment,$size='48'); ?>
+		<section class="comment-body">
+			<?php comment_text() ?>
 			<?php if ($comment->comment_approved == '0') : ?>
-       			<div class="notice">
-					<p class="bottom"><?php _e('Your comment is awaiting moderation.', 'reverie') ?></p>
-          		</div>
+				<p class="bottom"><?php _e('Your comment is awaiting moderation.', 'reverie') ?></p>
 			<?php endif; ?>
-			
-			<section class="comment">
-				<?php comment_text() ?>
-				<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-			</section>
+		</section>
 
-		</article>
+		<span class="meta">
+			<time datetime="<?php echo comment_date('c') ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php echo time_ago(); ?></a></time> <span> by </span>
+			<?php printf(__('<cite class="fn">%s</cite>', 'reverie'), get_comment_author_link()) ?>
+			<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+		</span>
+
+	</li>
 <?php } ?>
 
 <?php
@@ -43,7 +36,7 @@
 <?php // You can start editing here. Customize the respond form below ?>
 <?php if ( have_comments() ) : ?>
 	<section id="comments">
-		<h3><?php comments_number(__('No Responses to', 'reverie'), __('One Response to', 'reverie'), __('% Responses to', 'reverie') ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
+		<h2>Discussion</h2>
 		<ol class="commentlist">
 		<?php wp_list_comments('type=comment&callback=reverie_comments'); ?>
 		
@@ -72,7 +65,8 @@
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
 	<p><?php printf( __('You must be <a href="%s">logged in</a> to post a comment.', 'reverie'), wp_login_url( get_permalink() ) ); ?></p>
 	<?php else : ?>
-	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" class="row collapse">
+		<div class="large-5 columns">
 		<?php if ( is_user_logged_in() ) : ?>
 		<p><?php printf(__('Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'reverie'), get_option('siteurl'), $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php __('Log out of this account', 'reverie'); ?>"><?php _e('Log out &raquo;', 'reverie'); ?></a></p>
 		<?php else : ?>
@@ -89,12 +83,12 @@
 			<input type="text" class="five" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3">
 		</p>
 		<?php endif; ?>
-		<p>
+		</div>
+		<div class="large-6 columns">
 			<label for="comment"><?php _e('Comment', 'reverie'); ?></label>
 			<textarea name="comment" id="comment" tabindex="4"></textarea>
-		</p>
-		<p id="allowed_tags" class="small"><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></p>
-		<p><input name="submit" class="button" type="submit" id="submit" tabindex="5" value="<?php _e('Submit Comment', 'reverie'); ?>"></p>
+		</div>
+		<input name="submit" class="button" type="submit" id="submit" tabindex="5" value="Comment">
 		<?php comment_id_fields(); ?>
 		<?php do_action('comment_form', $post->ID); ?>
 	</form>

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- Row for main content area -->
-	<div class="small-12 large-9 columns" role="main">
+	<section id="main" role="main">
 	
 	<?php /* Start loop */ ?>
 	<?php while (have_posts()) : the_post(); ?>
@@ -21,7 +21,7 @@
 		</article>
 	<?php endwhile; // End the loop ?>
 
-	</div>
+	</section>
 	<?php get_sidebar(); ?>
 		
 <?php get_footer(); ?>

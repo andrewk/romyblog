@@ -4,18 +4,18 @@
 // doc page. We tried to name them to where they'd make sense just by reading them.
 // Go to http://foundation.zurb.com/docs/ to find what you need.
 
-$primary-color: #ff4e18;
-$secondary-color: #12bafb;
+$secondary-color: #03b5f9;
+$success-color: #ff410e;
 $alert-color: #c60f13;
-$success-color: #5da423;
+$primary-color: #5da423;
 
 // TYPOGRAPHY
-$header-font-family:  Baskerville, Times, serif;
+
+$paragraph-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$paragraph-font-weight: 400;
+
+$header-font-family:  $paragraph-font-family;
 $header-font-weight:  100;
 $header-font-style:   normal;
 $header-font-color:   #222;
-
-$paragraph-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$paragraph-font-weight: 400;
-
 

@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
-<!-- Row for main content area -->
-	<div class="small-12 large-9 columns" id="main" role="main">
+	<section id="main" role="main">
 
 		<h2><?php _e('Search Results for', 'reverie'); ?> "<?php echo get_search_query(); ?>"</h2>
 
@@ -25,7 +24,7 @@
 		</nav>
 	<?php } ?>
 
-	</div>
+	</section>
 	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
