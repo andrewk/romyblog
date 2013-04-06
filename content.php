@@ -8,16 +8,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header>
-		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-		<time class="updated" datetime="<?php the_time('c'); ?>" pubdate>
+	<h2 class="entry-title">
+		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		<small><time class="updated" datetime="<?php the_time('c'); ?>" pubdate>
 			<?php the_time('F jS'); ?> <span><?php the_time('Y'); ?></span>
-		</time>
-	</header>
+		</time></small>
+	</h2>
 	<div class="entry-content">
 		<?php the_content('Continue reading...'); ?>
 	</div>
-	<footer>
-		<?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?>
-	</footer>
 </article>

@@ -65,30 +65,30 @@
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
 	<p><?php printf( __('You must be <a href="%s">logged in</a> to post a comment.', 'reverie'), wp_login_url( get_permalink() ) ); ?></p>
 	<?php else : ?>
-	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" class="row collapse">
-		<div class="large-5 columns">
+	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" class="row ">
+		<div class="comment-author-fields">
 		<?php if ( is_user_logged_in() ) : ?>
 		<p><?php printf(__('Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'reverie'), get_option('siteurl'), $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php __('Log out of this account', 'reverie'); ?>"><?php _e('Log out &raquo;', 'reverie'); ?></a></p>
 		<?php else : ?>
 		<p>
 			<label for="author"><?php _e('Name', 'reverie'); if ($req) _e(' (required)', 'reverie'); ?></label>
-			<input type="text" class="five" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?>>
+			<input type="text" class="five" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" <?php if ($req) echo "aria-required='true'"; ?>>
 		</p>
 		<p>
 			<label for="email"><?php _e('Email (will not be published)', 'reverie'); if ($req) _e(' (required)', 'reverie'); ?></label>
-			<input type="text" class="five" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?>>
+			<input type="text" class="five" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" <?php if ($req) echo "aria-required='true'"; ?>>
 		</p>
 		<p>
 			<label for="url"><?php _e('Website', 'reverie'); ?></label>
-			<input type="text" class="five" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3">
+			<input type="text" class="five" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22">
 		</p>
 		<?php endif; ?>
 		</div>
-		<div class="large-6 columns">
+		<div class="comment-fields">
 			<label for="comment"><?php _e('Comment', 'reverie'); ?></label>
-			<textarea name="comment" id="comment" tabindex="4"></textarea>
+			<textarea name="comment" id="comment"></textarea>
+			<input name="submit" class="button" type="submit" id="submit"  value="Comment">
 		</div>
-		<input name="submit" class="button" type="submit" id="submit" tabindex="5" value="Comment">
 		<?php comment_id_fields(); ?>
 		<?php do_action('comment_form', $post->ID); ?>
 	</form>

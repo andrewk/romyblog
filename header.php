@@ -16,6 +16,8 @@
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
 
+	<script src="<?php echo get_template_directory_uri(); ?>"></script>
+
 	<!--  iPhone Web App Home Screen Icon 
 	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-icon-ipad.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-icon-retina.png" />
@@ -42,7 +44,9 @@
 <body <?php body_class(); ?>>
 
 <header class="row" role="banner">
-		<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+		<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
+<img src="<?php echo get_template_directory_uri(); ?>/img/header.jpg">
+			</a></h1>
 </header>
 
 <section class="container row" role="document">
