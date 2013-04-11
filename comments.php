@@ -10,7 +10,7 @@
 		</section>
 
 		<span class="meta">
-			<time datetime="<?php echo comment_date('c') ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php echo time_ago(); ?></a></time> <span> by </span>
+			<time datetime="<?php echo comment_date('c') ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php echo time_ago('comment'); ?></a></time> <span> by </span>
 			<?php printf(__('<cite class="fn">%s</cite>', 'reverie'), get_comment_author_link()) ?>
 			<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 		</span>
