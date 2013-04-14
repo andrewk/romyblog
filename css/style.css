@@ -5161,7 +5161,7 @@ ul {
 }
 
 figure {
-  margin-bottom: 1.25em;
+  margin: 1.25em 0;
 }
 
 input.prefix.button {
@@ -5189,12 +5189,14 @@ img.aligncenter {
 
 figure.figure {
   margin: 0 auto;
-  display: inline-block;
+  border: 1px solid #eee;
+  border-width: 1px 0;
+  padding-top: 10px;
 }
 figure.figure figcaption {
-  padding: 8px 10px;
+  padding: 10px 10px;
+  display: block;
   color: gray;
-  text-align: left;
   margin-bottom: 1.25em;
 }
 

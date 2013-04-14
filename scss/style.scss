@@ -83,7 +83,7 @@ ul {
 
 // add some margin for embeds in post
 figure {
-	margin-bottom: $paragraph-margin-bottom;
+	margin: $paragraph-margin-bottom 0;
 }
 
 // adjust search button on top-bar
@@ -115,11 +115,14 @@ img.aligncenter {
 // Add HTML5 Caption Class for Images
 figure.figure {
 	margin: 0 auto;
-	display: inline-block;
-	figcaption {
-		padding: 8px 10px;
+  border:1px solid #eee;
+  border-width:1px 0;
+  padding-top:10px;
+
+  figcaption {
+		padding: 10px 10px;
+    display:block;
 		color: gray;
-    text-align:left;
 		margin-bottom: $paragraph-margin-bottom;
 	}
 }
@@ -142,6 +145,7 @@ figure.aligncenter
   }
 
   text-align:center;
+
 }
 
 .widget
