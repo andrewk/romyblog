@@ -36,7 +36,7 @@
 <?php // You can start editing here. Customize the respond form below ?>
 <?php if ( have_comments() ) : ?>
 	<section id="comments">
-		<h2>Discussion</h2>
+	<h2><?php comments_number(); ?></h2>
 		<ol class="commentlist">
 		<?php wp_list_comments('type=comment&callback=reverie_comments'); ?>
 		

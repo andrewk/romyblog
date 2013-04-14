@@ -7,6 +7,6 @@
 	</h2>
 	<div class="entry-content">
 		<?php the_content('Continue reading...'); ?>
-		<h3><a href="<?php the_permalink(); ?>#comments">Discussion...</a></h3>
+		<h3><a href="<?php the_permalink(); ?>#comments"><?php comments_number('Comment'); ?></a></h3>
 	</div>
 </article>
