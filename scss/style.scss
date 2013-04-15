@@ -114,14 +114,12 @@ img.aligncenter {
 
 // Add HTML5 Caption Class for Images
 figure.figure {
-	margin: 0 auto;
-  padding-top:10px;
+	margin: 20px auto;
 
   figcaption {
-		padding: 10px 10px;
+    margin-top:10px;
     display:block;
 		color: gray;
-		margin-bottom: $paragraph-margin-bottom;
 	}
 }
 
