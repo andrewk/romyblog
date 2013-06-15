@@ -27,8 +27,8 @@
 
 <nav role="navigation">
 	<a href="<?php echo home_url(); ?>">home</a>
-	<a href="<?php echo home_url(); ?>/drawings">drawings</a>
 	<a href="<?php echo home_url(); ?>/paintings">paintings</a>
+	<a href="<?php echo home_url(); ?>/drawings">drawings</a>
 	<a href="<?php echo home_url(); ?>/writing">writing</a>
 	<a href="<?php echo home_url(); ?>/about">about</a>
 </nav>
