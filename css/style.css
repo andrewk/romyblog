@@ -5084,10 +5084,10 @@ table tfoot tr td {
 }
 [role="navigation"] a {
   color: #c60f13;
-  font-size: 1.75em;
+  font-size: 1.5em;
   font-weight: 200;
   display: inline-block;
-  padding: 0.625em 1.25em;
+  padding: 0.625em 1em;
   border-left: 1px solid #ddd;
 }
 [role="navigation"] a:first-child {
@@ -5356,4 +5356,12 @@ figure.aligncenter > a {
   font-size: 1.5em;
   font-weight: 100;
   letter-spacing: 0.1px;
+}
+
+@media only screen and (max-width: 680px) {
+  [role="navigation"] a {
+    font-size: 16px;
+    border: none;
+    padding: 0.625em;
+  }
 }
