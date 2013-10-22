@@ -75,7 +75,7 @@
 			<input type="text" class="five" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" <?php if ($req) echo "aria-required='true'"; ?>>
 		</p>
 		<p>
-			<label for="email"><?php _e('Email (will not be published)', 'reverie'); if ($req) _e(' (required)', 'reverie'); ?></label>
+			<label for="email"><?php _e('Email', 'reverie'); if ($req) _e(' (required)', 'reverie'); ?></label>
 			<input type="text" class="five" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" <?php if ($req) echo "aria-required='true'"; ?>>
 		</p>
 		<p>

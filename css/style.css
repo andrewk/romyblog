@@ -5105,8 +5105,8 @@ table tfoot tr td {
 
 .post {
   position: relative;
-  padding-bottom: 3.75em;
-  margin-bottom: 3.75em;
+  padding-bottom: 1.875em;
+  margin-bottom: 1.875em;
   border-bottom: 1px solid #e9e9e9;
 }
 .post .entry-title {
@@ -5261,7 +5261,7 @@ figure.aligncenter > a {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
-  width: 41.66667%;
+  width: 50%;
   float: left;
 }
 
@@ -5277,6 +5277,10 @@ figure.aligncenter > a {
   height: 14.375em;
   width: 100%;
   display: block;
+}
+
+label {
+  font-weight: 300;
 }
 
 .commentlist .comment {
@@ -5358,10 +5362,59 @@ figure.aligncenter > a {
   letter-spacing: 0.1px;
 }
 
-@media only screen and (max-width: 680px) {
+#scrolltriggered {
+  bottom: 0;
+  padding-bottom: 1.25em;
+  border-radius: 3px;
+}
+#scrolltriggered header {
+  display: block;
+  font-size: 1.25em;
+  margin: 1.25em 0 2.5em;
+  color: #c60f13;
+  font-weight: 700;
+}
+#scrolltriggered a#closebox {
+  box-shadow: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  color: #c60f13;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.25em;
+  }
+
+  h3 {
+    font-size: 1.125em;
+  }
+
   [role="navigation"] a {
     font-size: 16px;
     border: none;
     padding: 0.625em;
+  }
+
+  .post .updated {
+    position: static;
+  }
+
+  .post .entry-title {
+    padding-right: 0;
+  }
+  .post .entry-title small {
+    margin: 20px 0;
+    display: block;
+  }
+
+  .comment-author-fields, .comment-fields {
+    float: none;
+    width: auto;
   }
 }
