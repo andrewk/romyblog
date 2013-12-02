@@ -5100,7 +5100,9 @@ table tfoot tr td {
   padding-right: 0.9375em;
   width: 100%;
   float: left;
-  margin-top: 1.25em;
+  margin: 1.25em 0;
+  background: #efefef;
+  padding-top: 1.25em;
 }
 
 .post {
@@ -5230,20 +5232,22 @@ figure.aligncenter > a {
 }
 
 .widget {
-  padding-bottom: 1.25em;
   margin-bottom: 1.25em;
   border-bottom: 1px solid #e9e9e9;
 }
 .widget form {
   margin-bottom: 0;
+  padding: 10px;
 }
 .widget li {
   list-style: inside none;
 }
 .widget h2 {
-  font-size: 1.8em;
+  font-size: 1.125em;
   color: #666;
   margin-top: 0;
+  font-weight: 500;
+  padding: 0 10px;
 }
 
 #comments,
@@ -5312,14 +5316,14 @@ label {
 .commentlist .comment-body .comment .comment .comment-body:before {
   border-right-color: #e9e9e9;
 }
-.commentlist .meta {
+.commentlist .met {
   font-weight: 400;
   font-size: 0.75em;
   margin-top: 0.3125em;
   display: block;
   color: #666;
 }
-.commentlist .meta time a {
+.commentlist .met time a {
   color: #666;
 }
 .commentlist .fn {
