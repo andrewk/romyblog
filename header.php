@@ -31,6 +31,7 @@
 	<a href="<?php echo home_url(); ?>/drawings">drawings</a>
 	<a href="<?php echo home_url(); ?>/writing">writing</a>
 	<a href="<?php echo home_url(); ?>/about">about</a>
+	<a href="<?php echo home_url(); ?>/newsletter">newsletter</a>
 </nav>
 
 <section class="container row" role="document">
