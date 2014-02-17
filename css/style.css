@@ -5064,7 +5064,11 @@ table tfoot tr td {
 }
 
 [role="banner"] {
-  margin-bottom: 0.625em;
+  margin-bottom: 0;
+}
+[role="banner"] h1 {
+  font-size: 1em;
+  margin: 0;
 }
 [role="banner"] img {
   width: 100%;
@@ -5080,15 +5084,17 @@ table tfoot tr td {
 
 [role="navigation"] {
   text-align: center;
-  margin-bottom: 3.125em;
+  margin-bottom: 1.875em;
 }
 [role="navigation"] a {
   color: #c60f13;
-  font-size: 1.2em;
-  font-weight: 200;
+  font-size: 1.5em;
+  font-weight: 300;
   display: inline-block;
-  padding: 0.625em 1em;
-  border-left: 1px solid #ddd;
+  padding: 0.375em 0.625em;
+}
+[role="navigation"] a:hover {
+  text-decoration: underline;
 }
 [role="navigation"] a:first-child {
   border: none;

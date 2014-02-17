@@ -15,7 +15,9 @@
 
 [role="banner"]
 {
-  margin-bottom:emCalc(10px);
+  margin-bottom:0;
+
+  h1 { font-size:1em; margin:0; }
 
   img
   {
@@ -31,16 +33,17 @@
 [role="navigation"]
 {
   text-align:center;
-  margin-bottom:emCalc(50px);
+  margin-bottom:emCalc(30px);
 
   a
   {
     color:$alert-color;
-    font-size:1.2em;
-    font-weight:200;
+    font-size:1.5em;
+    font-weight:300;
     display:inline-block;
-    padding:emCalc(10px) emCalc(16px);
-    border-left:1px solid #ddd;
+    padding:emCalc(6px) emCalc(10px);
+
+    &:hover { text-decoration:underline; }
   }
 
   a:first-child
