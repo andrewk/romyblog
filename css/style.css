@@ -5064,7 +5064,8 @@ table tfoot tr td {
 }
 
 .beast-banner {
-  margin: 20px 0;
+  margin: 20px auto;
+  max-width: 1000px;
   padding: 20px;
   display: block;
   border: 1px solid #c2dce5;
