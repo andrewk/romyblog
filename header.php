@@ -43,4 +43,9 @@
 	<a href="<?php echo home_url(); ?>/newsletter">newsletter</a>
 </nav>
 
+<a class="beast-banner" href="http://release-the-beast.romysaizunde.com/">
+  <img src="/resources/banner1.png" alt="">
+  <img src="/resources/banner2.png" alt="" class="banner-tagline">
+</a>
+
 <section class="container row" role="document">

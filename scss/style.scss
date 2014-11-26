@@ -12,6 +12,8 @@
 // Comment out this import if you are customizing you imports below
 @import "foundation";
 
+@import "beast_banner";
+
 
 [role="banner"]
 {
@@ -56,7 +58,7 @@
 {
   @include grid-column(12);
   margin:emCalc(20px) 0;
-  background:#efefef; 
+  background:#efefef;
   padding-top:emCalc(20px);
 }
 
@@ -355,7 +357,7 @@ label { font-weight:300; }
     font-weight:700;
   }
 
-  // the fuck kinda selector is this. 
+  // the fuck kinda selector is this.
   a#closebox
   {
     box-shadow:none;
@@ -391,14 +393,14 @@ label { font-weight:300; }
   .post .entry-title {
     padding-right:0;
 
-    small { 
+    small {
       margin:20px 0;
-      display:block; 
+      display:block;
     }
   }
 
   .comment-author-fields, .comment-fields
-  { 
+  {
     float:none;
     width:auto;
   }

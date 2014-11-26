@@ -5063,6 +5063,30 @@ table tfoot tr td {
   max-width: 800px;
 }
 
+.beast-banner {
+  margin: 20px 0;
+  padding: 20px;
+  display: block;
+  border: 1px solid #c2dce5;
+  border-bottom-width: 3px;
+  background: url(/resources/banner3.jpg) no-repeat 97% 100%;
+  text-decoration: none;
+}
+
+.beast-banner img {
+  border: none;
+}
+
+.banner-tagline {
+  margin-bottom: 13px;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .banner-tagline {
+    display: none;
+  }
+}
 [role="banner"] {
   margin-bottom: 0;
 }
